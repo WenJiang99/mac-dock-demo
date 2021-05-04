@@ -1,0 +1,40 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: antiquewhite;
+}
+
+.dock-item {
+  flex: 1;
+  width: 8vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(4vh * var(--scale));
+  transform: scale(var(--scale));
+  transition: all 150ms linear;
+}
+
+.dock {
+  --scale: 1;
+  padding: 0;
+  margin: 0;
+  --scale: 1;
+  align-self: flex-end;
+  width: 90%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background-color: #888;
+}
+
+.dock:hover {
+  cursor: pointer;
+}
