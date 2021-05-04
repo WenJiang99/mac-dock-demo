@@ -6,28 +6,13 @@
   background-color: antiquewhite;
 }
 
-.dock-item {
-  flex: 1;
-  width: 8vw;
-  height: 8vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: calc(4vh * var(--scale));
-  transform: scale(var(--scale));
-  transition: all 150ms linear;
-}
-
 .dock {
   --scale: 1;
   padding: 0;
   margin: 0;
   --scale: 1;
   align-self: flex-end;
-  width: 90%;
-  height: 10vh;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   border: 1px solid #ddd;
@@ -37,4 +22,13 @@
 
 .dock:hover {
   cursor: pointer;
+}
+
+.dock-item {
+  font-size: calc(6rem * var(--scale));
+  padding: 0 .5rem;
+  cursor: default;
+  position: relative;
+  top: calc((6rem * var(--scale) - 6rem) / 2 * -1);
+  transition: 15ms all ease-out;
 }
